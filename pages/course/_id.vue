@@ -8,7 +8,7 @@
 				<nav>
 					<ol class="flex items-center justify-center sm:justify-start">
 						<li>
-							<a href="/courses" class="text-blue-600 hover:text-gray-500">Courses</a>
+							<a href="/index" class="text-blue-600 hover:text-gray-500">Courses</a>
 						</li>
 						<li class="flex items-center px-1 sm:px-2 opacity-25">
 							<svg class="hi-solid hi-chevron-right inline-block w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -19,7 +19,7 @@
 							</svg>
 						</li>
 						<li>
-							<a :href="'courses?category='+course.Category"
+							<a :href="'index?category='+course.Category"
 							   class="text-blue-600 hover:text-gray-500">{{ course.Category }}</a>
 						</li>
 						<li class="flex items-center px-1 sm:px-2 opacity-25">
@@ -179,7 +179,7 @@ export default {
 			this.lessonSelected = lesson
 		},
 		categoryClick() {
-			this.$router.push('/courses?category=' + this.course.Category)
+			this.$router.push('/index?category=' + this.course.Category)
 		}
 	}
 }
