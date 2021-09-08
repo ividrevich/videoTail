@@ -1,6 +1,6 @@
 export default {
   server: {
-    port: 8000,
+    port: 8080,
     host: '0.0.0.0'
   },
   /*
@@ -59,9 +59,9 @@ export default {
   ** Nuxt.js modules
   */
   pwa: {
-    // icon: {
-    //   source: '@/static/icon.png'
-    // }
+    icon: {
+      source: '@/static/icon.png'
+    }
   },
   router: {
     // base: process.env.NODE_DEV ? '/' : '/vuejs/JaxApp',
