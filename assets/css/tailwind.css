@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .bg-gradient-theme {
+        @apply bg-gradient-to-r from-yellow-500 to-yellow-300
+    }
+    .btn-nav-theme {
+        @apply border-yellow-300 bg-yellow-500 text-gray-800
+        hover:text-yellow-800 hover:bg-yellow-400 hover:border-yellow-300
+        focus:ring-yellow-500
+        active:bg-yellow-500 active:border-yellow-500
+    }
+}
