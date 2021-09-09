@@ -60,7 +60,7 @@ export default {
 			this.$router.push(this.link)
 		},
 		categoryClick() {
-			this.$router.push('courses?category=' + this.category)
+			this.$router.push('/?category=' + this.category)
 		}
 	},
 	computed: {

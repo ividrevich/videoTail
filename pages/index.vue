@@ -5,7 +5,7 @@
 			<nav>
 				<ol class="flex items-center justify-center sm:justify-start">
 					<li>
-						<a href="/courses" class="text-blue-600 hover:text-gray-500">Courses</a>
+						<a href="/" class="text-blue-600 hover:text-gray-500">Courses</a>
 					</li>
 					<li class="flex items-center px-1 sm:px-2 opacity-25">
 						<svg class="hi-solid hi-chevron-right inline-block w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -75,7 +75,7 @@ export default {
 		}
 	},
 	async fetch() {
-		
+		console.log('starting axios fetch')
 		this.courses = await this.$axios.$get('/api/math/course_list')
 		this.isLoaded = true
 	},

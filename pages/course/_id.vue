@@ -8,7 +8,7 @@
 				<nav>
 					<ol class="flex items-center justify-center sm:justify-start">
 						<li>
-							<a href="/index" class="text-blue-600 hover:text-gray-500">Courses</a>
+							<a href="/" class="text-blue-600 hover:text-gray-500">Courses</a>
 						</li>
 						<li class="flex items-center px-1 sm:px-2 opacity-25">
 							<svg class="hi-solid hi-chevron-right inline-block w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -19,7 +19,7 @@
 							</svg>
 						</li>
 						<li>
-							<a :href="'index?category='+course.Category"
+							<a :href="'/?category='+course.Category"
 							   class="text-blue-600 hover:text-gray-500">{{ course.Category }}</a>
 						</li>
 						<li class="flex items-center px-1 sm:px-2 opacity-25">
@@ -150,7 +150,7 @@ export default {
 				{params: axiosParams}).then(r => {
 				console.log(r)
 				this.lessons = r.data
-				this.lessonSelected = this.lessons[0]
+				this.lessonSelected = this.sortedLessons[0]
 			})
 		}
 	},
