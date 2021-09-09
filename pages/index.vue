@@ -46,7 +46,7 @@
 			
 			<!-- Course Card -->
 			
-			<ColorCard v-for="course in filteredCourses"
+			<ColorCard v-for="course in sortedCourses"
 			           :key="course.id"
 			           :title="course.Name"
 			           :sub-title="generateSubTitle(course)"
@@ -95,6 +95,9 @@ export default {
 			}
 			return this.courses
 		},
+		sortedCourses() {
+			return this.filteredCourses.sort((a,b) => a.LessonCount > b.LessonCount ? -1 : 1)
+		},
 		currentCategory() {
 			if (this.$route.query.category) {
 				return this.$route.query.category
@@ -102,6 +105,5 @@ export default {
 			return 'All'
 		}
 	}
-	
 }
 </script>
