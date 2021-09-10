@@ -26,8 +26,8 @@ export default {
 	},
 	computed: {
 		videoURL() {
-			if (this.lesson.Attachments) {
-				return this.lesson.Attachments[0].url
+			if (this.lesson.Video) {
+				return this.lesson.Video[0].url
 			}
 			return null
 		}

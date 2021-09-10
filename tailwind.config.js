@@ -5,8 +5,8 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: [
-      './components/**/*.vue',
-      './pages/**/*.vue'
+    './components/**/*.vue',
+    './pages/**/*.vue'
   ],
   mode: process.env.NODE_ENV ? 'jit' : undefined,
   darkMode: false, // or 'media' or 'class'
@@ -14,10 +14,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
+      
       black: colors.black,
       white: colors.white,
-
+      
       gray: colors.coolGray,
       red: colors.red,
       orange: colors.orange,
@@ -28,6 +28,43 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.purple,
       pink: colors.pink,
+      
+      iyellow: {
+        "50": "#fffdfa",
+        "100": "#fffcf5",
+        "200": "#fff2d6",
+        "300": "#ffe7b3",
+        "400": "#ffda8a",
+        "500": "#ffcb5c",
+        "600": "#ffae00",
+        "700": "#db9600",
+        "800": "#b37a00",
+        "900": "#7a5400"
+      },
+      "iblue": {
+        "50": "#fafcff",
+        "100": "#fafcff",
+        "200": "#d0e5fb",
+        "300": "#9dc8f6",
+        "400": "#61a6f0",
+        "500": "#1470d1",
+        "600": "#1368c3",
+        "700": "#1266bf",
+        "800": "#115cac",
+        "900": "#1059a7"
+      },
+      "iheading": {
+        "50": "#11f11e103",
+        "100": "#f1f2fd",
+        "200": "#9b9df3",
+        "300": "#4143e7",
+        "400": "#1619b1",
+        "500": "#0b0c56",
+        "600": "#0a0b4d",
+        "700": "#080944",
+        "800": "#070836",
+        "900": "#06062d"
+      }
     },
     extend: {
       fontFamily: {
@@ -91,7 +128,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography')(),
-    plugin(function({ addUtilities }) {
+    plugin(function ({addUtilities}) {
       const utilBgPatterns = {
         '.pattern-dots-sm': {
           'background-image': 'radial-gradient(currentColor 0.5px, transparent 0.5px)',
@@ -110,10 +147,10 @@ module.exports = {
           'background-size': 'calc(10 * 2px) calc(10 * 2px)',
         },
       }
-
+      
       addUtilities(utilBgPatterns)
     }),
-    plugin(function({ addUtilities }) {
+    plugin(function ({addUtilities}) {
       const utilFormSwitch = {
         '.form-switch': {
           'border': 'transparent',
@@ -135,7 +172,7 @@ module.exports = {
           },
         },
       }
-
+      
       addUtilities(utilFormSwitch)
     }),
   ],
